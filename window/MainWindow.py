@@ -18,7 +18,7 @@ class MainWindow(QMainWindow):
         """
         super(MainWindow, self).__init__(*args)
         print(__name__)
-        loadUi(os.path.join(fileDirName, 'UI_' + __class__.__name__ + '.ui'), self)
+        loadUi(os.path.join(fileDirName, __class__.__name__ + '.ui'), self)
 
     @pyqtSlot()
     def on_actionAboutQt_triggered(self):
