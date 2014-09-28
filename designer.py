@@ -8,8 +8,8 @@ from PyQt5.QtWidgets import QApplication
 app = QApplication(sys.argv)
 
 base = os.path.dirname(__file__)
+
 env = QProcessEnvironment.systemEnvironment()
-print(os.path.join(base, 'widget', 'designer'))
 env.insert('PYQTDESIGNERPATH', os.path.join(base, 'widget', 'designer'))
 env.insert('PYTHONPATH', os.path.join(base, 'widget'))
 
