@@ -1,1 +1,2 @@
- 
+class NewClass():
+    pass
