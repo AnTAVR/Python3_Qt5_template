@@ -2,24 +2,26 @@ import os
 
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QMainWindow, QApplication
-from PyQt5.uic import loadUi
 
-fileDirName = os.path.dirname(__file__)
+from ui_MainWindow import Ui_MainWindow
 
-
-class MainWindow(QMainWindow):
+class MainWindow(QMainWindow, Ui_MainWindow):
     """
-    Главное окно
+    Главное окно.
     """
     def __init__(self, *args):
         """
-
+        Инициализация класса главного окна.
         :param args:
         """
         super(MainWindow, self).__init__(*args)
-        print(__name__)
-        loadUi(os.path.join(fileDirName, __class__.__name__ + '.ui'), self)
+        self.setupUi(self)
 
-    @pyqtSlot()
-    def on_actionAboutQt_triggered(self):
+
+    @pyqtSlot(name='on_actionAboutQt_triggered')
+    def aboutQt(self):
+        """
+        Слот раздела меню AboutQt.
+        Выводит окно с версийе Qt.
+        """
         QApplication.instance().aboutQt()
