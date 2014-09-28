@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-
-import sys, os
+import sys
+import os
 
 # добавляем пути для поиска компонентов.
 # pathLib = '/usr/lib/main'
