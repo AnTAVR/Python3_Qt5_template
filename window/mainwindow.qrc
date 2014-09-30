@@ -1,5 +1,5 @@
 <!DOCTYPE RCC><RCC version="1.0">
  <qresource>
-     <file>rc/MainWindow/images/logo.png</file>
+     <file>rc/mainwindow/images/logo.png</file>
  </qresource>
  </RCC>
